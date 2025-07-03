@@ -8,8 +8,6 @@ jobs:
     say-hello:
         runs-on: ubuntu-latest
         steps:
-          - name: Hello World
-            run: echo "Hello, World!"
-          - name: name
+            run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
             run: echo "This is Le Thi Thao"
 
