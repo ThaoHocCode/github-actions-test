@@ -4,12 +4,13 @@ name: Hello World
 on: 
   push: 
     paths:
-      - 'README.md'
-      - 'docs/**'
-      - '**.yaml'
+      # - 'README.md'
+      # - 'docs/**'
+      # - '**.yaml'
     branches:
-      - 'main'
-      - '!dev/**'
+      # - 'main'
+      # - '!dev/**'
+  workflow_dispatch: 
 jobs:
     say-hello:
         runs-on: ubuntu-latest
