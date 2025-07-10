@@ -9,4 +9,3 @@ jobs:
         steps:
             - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
             - run: echo This is Le Thi Thao, today is $TODAY
-
