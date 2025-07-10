@@ -1,7 +1,8 @@
 #workflow
 
 name: Hello World 
-on: 
+on:
+  push:
   workflow_dispatch: 
 jobs:
     say-hello:
