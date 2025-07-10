@@ -4,12 +4,7 @@ name: Hello World
 on: 
   push: 
     paths:
-      # - 'README.md'
-      # - 'docs/**'
-      # - '**.yaml'
     branches:
-      # - 'main'
-      # - '!dev/**'
   workflow_dispatch: 
 jobs:
     say-hello:
