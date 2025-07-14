@@ -2,10 +2,17 @@
 
 name: Hello World 
 on:
-  workflow_dispatch: 
+pull_request:
+  type:[opened,reopened,synchronize,labeled,unlabeled]
+workflow_dispatch: 
 jobs:
     say-hello:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-            - run: echo This is Le Thi Thao, today is $TODAY
+        - uses: mheap/github-action-required-labels@v5
+          with:
+            mode: exactly
+            count: 0
+            labels: "do not merge"
+        - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+        - run: echo This is Le Thi Thao, today is $TODAY
