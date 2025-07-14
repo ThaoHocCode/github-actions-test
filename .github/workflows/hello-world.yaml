@@ -10,9 +10,9 @@ on:
     branches:
       - 'main'
       - '!dev/**'
-pull_request:
-  type:[opened,reopened,synchronize,labeled,unlabeled]
-workflow_dispatch: 
+  pull_request:
+    type:[opened,reopened,synchronize,labeled,unlabeled]
+  workflow_dispatch: 
 jobs:
     say-hello:
         runs-on: ubuntu-latest
